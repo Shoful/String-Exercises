@@ -6,9 +6,17 @@
 // DrEvil(1000000): 1000000 dollars (pinky)
 // answer below:
 
-
-
-
+function drEvil(amount) {
+  if (Number(amount) === 1000000) {
+    return `${amount} dollars pinky`
+  } else if (Number(amount)) {
+    return `${amount} dollars`
+  } else {
+    return "Not the right amount";
+  }
+}
+console.log(drEvil(10));
+console.log(drEvil(1000000));
 
 
 
@@ -19,7 +27,13 @@
 //mixUp('mix', 'pod'): 'pox mid'
 //mixUp('dog', 'dinner'): 'dig donner'
 //write answer below 
+function mixUp(string1, string2) {
+  let letterOne = string1.slice(2);
+  let letterTwo = string2.slice(2);
+  return string2.slice(0, 2) + letterOne + " " + string1.slice(0, 2) + letterTwo
+}
 
+console.log(mixUp("cat", "dog"));
 
 
 
@@ -31,7 +45,11 @@
 //fixstart('babble'): 'ba**le'
 //write answer below
 
+function fixStart(string) {
 
+  return string.replace(/b/g, "*");
+}
+console.log(fixStart("babble"));
 
 
 
